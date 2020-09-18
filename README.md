@@ -22,6 +22,7 @@ Software:
 Ø SQL 
 Ø PHP 
 Ø Html
+Ø Css
 
 
 Future Plan:
