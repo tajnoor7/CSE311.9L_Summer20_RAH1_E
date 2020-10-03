@@ -1,37 +1,70 @@
+<?php
+
+
+
+$link = mysqli_connect("localhost", "root", "", "test");
+// Check connection
+if($link === false)
+{
+die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+
+// Escape user inputs for security
+$email = mysqli_real_escape_string($link, $_REQUEST['email']);
+
+
+
+// attempt insert query execution
+
+$sql = "INSERT INTO sabbir (email) VALUES 
+('$email')";
+
+if(mysqli_query($link, $sql))
+{
+   //echo "Records added successfully.";
+} 
+else{
+echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+// close connection
+mysqli_close($link);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Ticket Sell History</title>
+    <title>Purchase History</title>
       <!-- <link rel="stylesheet" type="text/css" href="style_flights.css"> -->
 
 
 
   </head>
-  <body style="background-color:LIGHTSTEELBLUE;">
+  <body style="background-color:CADETBLUE;">
       <header>
     <style>
     table {
-      background: #B0E0E6;
+      background: #7FFFD4;
       font-family: arial, sans-serif;
       border-collapse: collapse;
       width: 90%;
     }
 
     td, th {
-      border: 2px solid #FF5733;
+      border: 2px solid #9ACD32;
       text-align: left;
       padding: 8px;
     }
 
      tr:nth-child(even) {
-      background-color: #FFE4E1;
+      background-color: #E0FFFF;
     } 
     </style>
 
 
 
-<h2 align="center" class="h">Ticket Sell History</h2>
+<h2 align="center" class="h">Purchase History</h2>
 
 <table align="center">
   <tr>
@@ -60,8 +93,9 @@ if($conn->connect_error){
 
 }
 $sql="SELECT b.passenger_fname, b.passenger_lname, b.passenger_email, b.travel_from, b.travel_to, b.train_name, b.date,  b.class, t.economy_class_price as ticket_price,  b.seat, b.seat * t.economy_class_price AS total_price
-FROM booking as b JOIN ticket as t 
-ON(b.train_name = t.train_name)";
+FROM booking as b JOIN ticket as t JOIN sabbir as s
+ON(b.train_name = t.train_name)
+WHERE b.passenger_email = s.email";
 $result = $conn->query($sql);
 
 if($result->num_rows>0){
@@ -81,7 +115,7 @@ $conn->close();
 
 <br>
 <br>
-<a href="admin_dashboard.php"><center><font color="blue">Back to Admin Dashboard</font></center> </a>
+<a href="home.php"><center><font color="BLUEVIOLET">Back to Dashboard</font></center> </a>
 
 </body>
 </html>

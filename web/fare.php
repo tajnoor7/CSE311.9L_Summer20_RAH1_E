@@ -38,8 +38,8 @@
   <tr>
     <th>TRAIN ID</th>
     <th>TRAIN NAME</th>
-    <th>Economy Class Price</th>
-    <th>Business Class Price</th>
+    <th>Economy Class Fare</th>
+    <th>Business Class Fare</th>
   </tr>
 
 
@@ -69,5 +69,12 @@ $conn->close();
 
 </table>
 </header>
+
+<br>
+<br>
+<br>
+
+         <a href="home.php"><center><font color="black">Back to Dashboard</font></center> </a>
+
 </body>
 </html>

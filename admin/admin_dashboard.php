@@ -30,15 +30,22 @@
 
 <h2 align="center" class="i">Welcome to Bangladesh Railway</h2>
 
+<br>
+
 </head>
 
  
 
- <h2 align="center" class="m">
+ <center><h2 align="center" class="m">
  	Admin Dashboard
- </h2>
+ </h2></center>
 
 <body>
+
+  <br>
+  <br>
+
+
 <center>
 <div id="k">
 
@@ -54,22 +61,33 @@
 </input>
 
 
+<a href="fare_check.php"><input name="back" type="button" type="body" id="check" value="Check">
+</input>
+
+
 <a href="train_info.html"><input name="back" type="button" id="dash" value="Set Train Information">
 </input>
 
+<a href="info_check.php"><input name="back" type="button" id="check" value="Check">
+</input>
 
 <a href="route.html"><input name="back" type="button" id="dash" value="Set Train Route">
 </input>
 
+<a href="route_check.php"><input name="back" type="button" id="check" value="Check">
+</input>
 
-<a href="purchase_history.php"><input name="back" type="button" id="dash" value="Purchase History">
+
+<a href="purchase_history.php"><input name="back" type="button" id="dash" value="Ticket Sell History">
 </input>
 
 
 <a href="admin.php"><input name="back" type="button" id="dash" value="Admin List">
 </input>
 
-
+<br>
+<br>
+<br>
 
 <input name="logout" type="submit" id="log" value="LOG-OUT">
 </input>

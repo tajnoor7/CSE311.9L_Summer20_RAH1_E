@@ -34,9 +34,9 @@
 
  
 
- <h2 align="center" class="m">
+ <center><h2 align="center" class="m">
  	Dashboard
- </h2>
+ </h2></center>
 
 <body>
 <center>
@@ -64,7 +64,7 @@
 </input>
 
 
-<a href="purchase_history.php"><input name="back" type="button" id="dash" value="Purchase History">
+<a href="ph.html"><input name="back" type="button" id="dash" value="Purchase History">
 </input>
 
 
@@ -72,6 +72,9 @@
 <a href="contact.php"><input name="back" type="button" id="dash" value="Contact Us">
 </input>
 
+<br>
+<br>
+<br>
 
 <input name="logout" type="submit" id="log" value="LOG-OUT">
 </input>

@@ -57,9 +57,14 @@ mysqli_close($link);
     
      <<header>
      <div>
-        <h1 style="font-size:70px;font-display: block;"><font color="yellow"><center> Registration Successful</center> </font> </h1>
+        <h1 style="font-size:70px;font-display: block;"><font color="yellow"><center>Purchase Ticket Successful</center> </font> </h1>
       </div>  
       </header>
-         <a href="home.php"><center><font color="white">Home</font></center> </a>
+
+      <a href="purchase_ticket.html"><center><font color="white">Purchase Ticket Again</font></center> </a>
+
+      <br>
+
+         <a href="home.php"><center><font color="white">Back to Dashboard</font></center> </a>
     </body>
    </html>
